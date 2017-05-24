@@ -1,0 +1,18 @@
+<form style="text-alignment:center">
+    <h2>Add a item</h2>
+    <input type="text" name="items">
+    {%if items%}
+        {%for x in items%}
+         <input type="hidden" name="items" value="{{x}}">
+        {%endfor%}
+    {%endif%}
+    <button type="submit">Submit</button>
+<h2>Shopping list</h2>
+    <ul>
+        {%if items%}
+            {%for x in items%}
+                <li>{{x}}</li>
+            {%endfor%}
+        {%endif%}
+    </ul>
+</form>

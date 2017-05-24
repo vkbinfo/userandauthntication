@@ -1,0 +1,24 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  script: home.app
+
+- url: /feedbuzz
+  script: home.app
+
+- url: /signup
+  script: home.app
+
+- url: /login
+  script: home.app
+
+- url: /unit3/welcome
+  script: home.app
+
+
+libraries:
+- name: jinja2
+  version: latest
