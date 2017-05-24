@@ -15,6 +15,9 @@ handlers:
 - url: /login
   script: home.app
 
+- url: /logout
+  script: home.app
+
 - url: /unit3/welcome
   script: home.app
 

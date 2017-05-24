@@ -170,7 +170,14 @@ class LogIn(Handler):
         else:
             self.render_argument(error1="user does not exist")
 
+class LogOut(Handler):
+    def get(self):
+        self.response.headers.add_header("Set-Cookie", "user_id =" + "; path=/")
+        self.redirect("/signup")
+
+
+
 app = webapp2.WSGIApplication([
     ('/', MainPage), ('/feedbuzz', FeedBuzz), ('/signup', SignUp),
-    ("/unit3/welcome",Userwelcome),("/login", LogIn)
+    ("/unit3/welcome",Userwelcome),("/login", LogIn) , ("/logout",LogOut)
 ], debug=True)
